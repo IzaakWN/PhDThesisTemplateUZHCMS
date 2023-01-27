@@ -5,6 +5,7 @@ Please use the sources below to look for updated plots.
 
 ## Standard Model & beyond
 - SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg
+- SM particle timeline: https://tikz.net/timeline/, https://particleadventure.org/other/history/index.html
 - NNPDF31 PDF plots: https://arxiv.org/abs/1706.00428
 - Averages of B hadron decays (e.g. R(D) and R(D*)): https://hflav-eos.web.cern.ch/hflav-eos/semi/
 - Summary of flavor anomalies: https://www.nikhef.nl/~pkoppenb/anomalies.html
@@ -26,7 +27,7 @@ Please use the sources below to look for updated plots.
 - TikZ figures: https://tikz.net/tag/tau/
 - CMS tau reconstruction with the HPS algorithm: https://arxiv.org/abs/1809.02816, http://cds.cern.ch/record/2196972, http://cms-results.web.cern.ch/cms-results/public-results/publications/TAU-16-003
 - CMS tau identification with the DeepTau algorithm: https://arxiv.org/abs/2201.08458, https://gitlab.cern.ch/tdr/papers/TAU-20-001, http://cms-results.web.cern.ch/cms-results/public-results/publications/TAU-20-001
-- Lifetime plot: [`objects/SM_particles_masses.pdf`](objects/SM_particles_masses.pdf)
+- Lifetime vs. mass plot: [`objects/SM_particles_masses.pdf`](objects/SM_particles_masses.pdf), https://arxiv.org/abs/1810.12602
 
 ## Higgs
 - CMS Higgs results & plots: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsHIG
