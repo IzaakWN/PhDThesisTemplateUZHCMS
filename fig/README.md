@@ -10,6 +10,10 @@ Please use the sources below to look for updated plots.
 - Averages of B hadron decays (e.g. R(D) and R(D*)): https://hflav-eos.web.cern.ch/hflav-eos/semi/
 - Summary of flavor anomalies: https://www.nikhef.nl/~pkoppenb/anomalies.html
 
+## Feynman diagrams
+- See https://wiki.physik.uzh.ch/cms/latex:feynman
+- See https://www.overleaf.com/learn/latex/Feynman_diagrams
+
 ## LHC
 - CMS instantaneous & integrated luminosities: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults
 
