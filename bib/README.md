@@ -25,7 +25,7 @@ The `refs_*.bib` contain more references that may be useful for CMS members:
 - [`refs_stats.bib`](refs_stats.bib): For statistical methods, ...
 Note that some references are for CMS-internal use only (ANs), and cannot be used in theses.
 
-You can load multiple `.bib` files in [`bib/references.tex`](references.tex) like this:
+You can load multiple `.bib` files in [`sections/references.tex`](../sections/references.tex) like this:
 ```
 \bibliographystyle{bib/style_CMS_TDR}
 \begin{flushleft}
