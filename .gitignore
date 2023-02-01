@@ -1,0 +1,7 @@
+*.aux
+*.log
+*.out
+*.gz
+.DS_Store
+thesis.b*
+thesis_*
