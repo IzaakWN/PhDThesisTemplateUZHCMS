@@ -4,6 +4,7 @@ Some of the figures uploaded in this repo may be outdated by the time you need t
 Please use the sources below to look for updated plots.
 
 ## Standard Model & beyond
+- TikZ figures: https://tikz.net/category/physics/particle-physics/
 - SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg
 - SM particle timeline: https://tikz.net/timeline/, https://particleadventure.org/other/history/index.html
 - NNPDF31 PDF plots: https://arxiv.org/abs/1706.00428

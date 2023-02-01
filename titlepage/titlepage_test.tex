@@ -1,13 +1,15 @@
 % Author: Izaak Neutelings (24/01/2023)
 % PhD checklist: https://www.mnf.uzh.ch/en/studium/phd/checkliste-fuer-doktorierende.html
 % UZH CMS wiki https://wiki.physik.uzh.ch/cms/newcomers:gettingstarted#phd_students
+\RequirePackage{fix-cm} % against warnings for \fontsize
 %\documentclass[a4paper,11pt]{book}
 \documentclass[a4paper,11pt,usegeometry]{scrreprt} % scrreprt = KOMA script
 \usepackage[T1]{fontenc} % load before inputenc
 \usepackage[utf8]{inputenc}
-%\usepackage{lmodern}
+%\usepackage{lmodern} % different font
 \usepackage{tikz}
 \usepackage{lipsum} % dummy text
+\usepackage{setspace} % for \setstretch
 \usepackage{geometry} % WARNING: add 'usegeometry' option for scrreprt class
 
 % PAGE LAYOUT / MARGIN
@@ -30,12 +32,13 @@
 \newgeometry{margin=1cm}
 \begin{titlepage}
 \begin{center}
+\setstretch{1} % unset (locally) any scaling of the linespacing
 
-%% OVERLAY official title page from MS Word template of UZH MNF for fine-tuning the spacing
-%\begin{tikzpicture}[remember picture,overlay]
-%  \node[draw=red,line width=10,fill opacity=0.2] at (current page.center){%
-%    \includegraphics[scale=1]{titlepage_UZH_PhD_red.pdf}};
-%\end{tikzpicture}
+% OVERLAY official title page from MS Word template of UZH MNF for fine-tuning the spacing
+\begin{tikzpicture}[remember picture,overlay] % use \usepackage{tikz} in the preamble
+  \node[draw=red,line width=10,fill opacity=0.2] at (current page.center){%
+    \includegraphics[scale=1]{titlepage_UZH_PhD_red.pdf}};
+\end{tikzpicture}
 
 % TITLE
 % Rules for Capitalization in Titles
@@ -48,14 +51,14 @@
 \vspace*{\dimexpr-\topmargin-\headheight-6.4mm\relax}
 \bfseries\fontsize{14pt}{17pt}\selectfont % bold font, 14pt
 A Search for New Exotic Particles with Jets\\
-in Proton-Proton Collisions at the CMS Experiment\\
+in Proton-Proton Collisions at the CMS Experiment%
 
 % HORIZONTAL LINE
-\vspace{12pt}
+\vspace{3pt}
 \centerline{\rule{171mm}{0.3pt}} % horizontal line
+\vspace{24pt}
 
 % INSTITUTE
-\vspace{24.5pt}
 \bfseries\fontsize{11pt}{12.95pt}\selectfont % bold font, 11pt
 Dissertation%
 \break
@@ -128,7 +131,7 @@ Deutschland%
 % dissertation supervisor annotated as (Leitung der Dissertation)
 \bfseries % bold font
 Promotionskommission%
-\vspace{1pt}%
+\vspace{3pt}%
 \break
 \break
 \hspace*{11.5mm}%
