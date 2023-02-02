@@ -6,14 +6,17 @@ Please use the sources below to look for updated plots.
 ## Official CMS style
 Please note the rules for plots with CMS data, simulation, results in PhD theses:
 https://twiki.cern.ch/twiki/bin/view/CMS/PhysicsApprovals#Thesis_endorsement
+
 You can find a standalone python module to get the official CMS style in ROOT plots here:
 [`CMSStyle.py`](https://github.com/cms-tau-pog/TauFW/blob/master/Plotter/python/plot/CMSStyle.py).
 
 ## Standard Model & beyond
 - TikZ figures: https://tikz.net/category/physics/particle-physics/
-- SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg
+- Particle physics timeline & energy scales: https://tikz.net/timeline/, https://particleadventure.org/other/history/index.html, [`intro/SM_timeline.pdf`](intro/SM_timeline.pdf)
+- SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg, PDF version: [`intro/SM_content_edited.pdf`](intro/SM_content_edited.pdf)
 - SM particle timeline: https://tikz.net/timeline/, https://particleadventure.org/other/history/index.html
-- NNPDF31 PDF plots: https://arxiv.org/abs/1706.00428
+- Graphical representation of representations and quantum numbers under the SM gauge symmetry group: [`intro/SM_isospin_weak.pdf`](intro/SM_isospin_weak.pdf)
+- NNPDF31 PDF plots: https://arxiv.org/abs/1706.00428, [`intro/pdf_NNPDF3.1_NNLO.pdf`](intro/pdf_NNPDF3.1_NNLO.pdf)
 - Averages of B hadron decays (e.g. R(D) and R(D*)): https://hflav-eos.web.cern.ch/hflav-eos/semi/
 - Summary of flavor anomalies: https://www.nikhef.nl/~pkoppenb/anomalies.html
 
