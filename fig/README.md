@@ -17,6 +17,7 @@ You can find a standalone python module to get the official CMS style in ROOT pl
 - SM particle timeline: https://tikz.net/timeline/, inspired by https://particleadventure.org/other/history/index.html
 - Graphical representation of representations and quantum numbers under the SM gauge symmetry group: [`intro/SM_isospin_weak.pdf`](intro/SM_isospin_weak.pdf)
 - NNPDF31 PDF plots: https://arxiv.org/abs/1706.00428, [`intro/pdf_NNPDF3.1_NNLO.pdf`](intro/pdf_NNPDF3.1_NNLO.pdf)
+- CMS physics results & cross sections: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsCombined
 
 ## Feynman diagrams
 - For instructions, see https://www.overleaf.com/learn/latex/Feynman_diagrams
@@ -25,6 +26,15 @@ You can find a standalone python module to get the official CMS style in ROOT pl
 ## Flavor physics
 - Averages of B hadron decays (e.g. R(D) and R(D*)): https://hflav-eos.web.cern.ch/hflav-eos/semi/
 - Summary of flavor anomalies: https://www.nikhef.nl/~pkoppenb/anomalies.html
+
+## Higgs
+- CMS Higgs results & plots: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsHIG
+- LHC Higgs plots (cross sections, branching fractions): https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CrossSections, https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGCrossSectionsFigures
+
+## EXO summary plots
+- CMS EXO public results: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SummaryPlotsEXO13TeV
+- CMS physics results: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsCombined
+- ATLAS EXO public results: https://twiki.cern.ch/twiki/bin/view/AtlasPublic/ExoticsPublicResults#Summary_Plots
 
 ## LHC
 - CMS instantaneous & integrated luminosities: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults
@@ -44,11 +54,3 @@ You can find a standalone python module to get the official CMS style in ROOT pl
 - CMS tau reconstruction with the HPS algorithm (TAU-16-003): https://arxiv.org/abs/1809.02816, http://cds.cern.ch/record/2196972, http://cms-results.web.cern.ch/cms-results/public-results/publications/TAU-16-003
 - CMS tau identification with the DeepTau algorithm (TAU-20-001): https://arxiv.org/abs/2201.08458, https://gitlab.cern.ch/tdr/papers/TAU-20-001, http://cms-results.web.cern.ch/cms-results/public-results/publications/TAU-20-001
 - Lifetime vs. mass plot: [`objects/SM_particles_masses.pdf`](objects/SM_particles_masses.pdf), https://arxiv.org/abs/1810.12602
-
-## Higgs
-- CMS Higgs results & plots: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsHIG
-- LHC Higgs plots (cross sections, branching fractions): https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CrossSections
-
-## EXO summary plots
-- CMS EXO public results: https://twiki.cern.ch/twiki/bin/view/CMSPublic/SummaryPlotsEXO13TeV
-- ATLAS EXO public results: https://twiki.cern.ch/twiki/bin/view/AtlasPublic/ExoticsPublicResults#Summary_Plots

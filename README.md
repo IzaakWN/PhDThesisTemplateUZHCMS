@@ -5,6 +5,7 @@ For a Master thesis in the Physics Institute, an official UZH template can also 
 [here](https://www.physik.uzh.ch/en/study/Counselling-and-forms/formulare.htm).
 
 The main file is [`thesis.tex`](thesis.tex), which loads the chapters from [`sections/`](sections/).
+If you use TeXShop, you can include `%!TEX root = ../thesis.tex` at the top of each file to compile this file.
 
 ## Title page
 The faculty of natural sciences (MNF) has strict guidelines for the tile page and provides a template in MS Word.

@@ -1,6 +1,7 @@
 *.aux
 *.log
 *.out
+*.toc
 *.gz
 .DS_Store
 thesis.b*
