@@ -18,12 +18,29 @@ Note that for particle names, "unslanted" Greek letters are used (this is just m
 Other common macros are loaded from [`settings/macros_user.tex`](settings/macros_user.tex).
 
 ## Figures
-Some basic figures related to the SM, LHC, and CMS can be found in [`fig/`](fig).
+Some basic figures related to the SM, LHC, and CMS plus sources and can be found in [`fig/`](fig).
+
 Please note the rules for plots with CMS data, simulation, results in PhD theses:
 https://twiki.cern.ch/twiki/bin/view/CMS/PhysicsApprovals#Thesis_endorsement
 
 ## References
-A bibliography style file for `BibTeX` that is adopted from the official CMS TDR style can be found in [`bib/`](bib).
+A bibliography style file for `BibTeX` that is adopted from the official CMS TDR style can be found in [`bib/`](bib),
+as well as a bunch of BibTeX files with useful references.
 
-## Import to Overleaf
-Please see the instructions [here](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub).
+## Copy/Import to Overleaf
+This GitHub repo is synced to [this Overleaf project](https://www.overleaf.com/read/mspvhdpynsjb).
+You can copy it to your own account.
+
+Alternatively, you can clone this GitHub repo locally, and push it to
+[Overleaf](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub).
+Create a new "Blank Project" from [My Projects](https://www.overleaf.com/project)
+on Overleaf. Find the git repo link of your project from the menu under "Git".
+```
+git clone git@github.com:IzaakWN/PhDThesisTemplateUZHCMS.git thesis
+cd thesis
+git remote add overleaf https://git.overleaf.com/...
+git checkout master
+git pull overleaf master --allow-unrelated-histories
+git revert --mainline 1 HEAD
+git push overleaf master
+```

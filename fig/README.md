@@ -3,6 +3,12 @@ Some basic figures related to the SM, LHC, and CMS.
 Some of the figures uploaded in this repo may be outdated by the time you need them.
 Please use the sources below to look for updated plots.
 
+## Official CMS style
+Please note the rules for plots with CMS data, simulation, results in PhD theses:
+https://twiki.cern.ch/twiki/bin/view/CMS/PhysicsApprovals#Thesis_endorsement
+You can find a standalone python module to get the official CMS style here:
+[`CMSStyle.py`](https://github.com/cms-tau-pog/TauFW/blob/master/Plotter/python/plot/CMSStyle.py).
+
 ## Standard Model & beyond
 - TikZ figures: https://tikz.net/category/physics/particle-physics/
 - SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg
@@ -12,8 +18,8 @@ Please use the sources below to look for updated plots.
 - Summary of flavor anomalies: https://www.nikhef.nl/~pkoppenb/anomalies.html
 
 ## Feynman diagrams
-- See https://wiki.physik.uzh.ch/cms/latex:feynman
-- See https://www.overleaf.com/learn/latex/Feynman_diagrams
+- For instructions, see https://www.overleaf.com/learn/latex/Feynman_diagrams
+- For a gallery of examples, see https://wiki.physik.uzh.ch/cms/latex:feynman
 
 ## LHC
 - CMS instantaneous & integrated luminosities: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults
