@@ -45,4 +45,5 @@ cd bib/
 curl https://raw.githubusercontent.com/IzaakWN/CodeSnippets/master/LaTeX/cleanBibTeX.py > cleanBibTeX.py
 python cleanBibTeX.py refs.bib -o refs_clean.bib --backup --check
 ```
-The checks are similar to this script from CMS TDR: https://gitlab.cern.ch/tdr/utils/-/blob/master/general/cleanRefs.
+The checks are similar to this script from CMS TDR:
+https://gitlab.cern.ch/tdr/utils/-/blob/master/general/cleanRefs.py
