@@ -36,7 +36,7 @@ You can find a standalone python module to get the official CMS style in ROOT pl
 - CMS physics results: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsCombined
 - ATLAS EXO public results: https://twiki.cern.ch/twiki/bin/view/AtlasPublic/ExoticsPublicResults#Summary_Plots
 
-## LHC
+## LHC & luminosities
 - CMS instantaneous & integrated luminosities: https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults
 
 ## CMS detector
