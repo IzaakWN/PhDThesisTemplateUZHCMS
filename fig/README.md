@@ -1,4 +1,4 @@
-# Figures
+# Particle Physics & CMS Figures
 Some basic figures related to the SM, LHC, and CMS.
 Some of the figures uploaded in this repo may be outdated by the time you need them.
 Please use the sources below to look for updated plots.
@@ -6,7 +6,7 @@ Please use the sources below to look for updated plots.
 ## Official CMS style
 Please note the rules for plots with CMS data, simulation, results in PhD theses:
 https://twiki.cern.ch/twiki/bin/view/CMS/PhysicsApprovals#Thesis_endorsement
-You can find a standalone python module to get the official CMS style here:
+You can find a standalone python module to get the official CMS style in ROOT plots here:
 [`CMSStyle.py`](https://github.com/cms-tau-pog/TauFW/blob/master/Plotter/python/plot/CMSStyle.py).
 
 ## Standard Model & beyond

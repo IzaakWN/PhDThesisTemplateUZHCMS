@@ -1,7 +1,9 @@
-# References
+# Particle Physics & CMS References
 
-The bibliography style file `style_CMS_TDR` for `BibTeX` is adopted from the official
+## BibTeX style
+The bibliography style file [`style_CMS_TDR.bst`](style_CMS_TDR.bst) for `BibTeX` is adopted from the official
 CMS TDR style found here: https://gitlab.cern.ch/tdr/utils/-/blob/master/general/cms_unsrt.bst
+On nice feature of this style is that it automatically makes the name of collaborations bold.
 
 ## Recommended & common references
 Many recommended & common references for CMS are available in
@@ -12,8 +14,10 @@ Many recommended & common references for CMS are available in
 - Statistics: https://twiki.cern.ch/twiki/bin/viewauth/CMS/StatisticsReferences
 - Combine: https://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/part4/usefullinks/?#citations
 
+Note some guidelines for references and citations in CMS publications are given here: https://twiki.cern.ch/twiki/bin/viewauth/CMS/Internal/PubGuidelines#References
+
 ## More references
-The `refs_*.bib` contain more references that may be useful for CMS members:
+The `refs_*.bib` contain more cleaned-up references that may be useful for CMS members:
 - [`refs_SM.bib`](refs_SM.bib): For the Standard Model (SM) of particle physics, including some historical papers.
 - [`refs_Higgs.bib`](refs_Higgs.bib): For Higgs theory & discovery, ...
 - [`refs_flavor.bib`](refs_flavor.bib): For flavor physics, including basic theory, lepton-flavor universality (LFU), lepton-flavor violating (LFV) decays, LFU, B anomalies, LQ models, ...
@@ -41,3 +45,4 @@ cd bib/
 curl https://raw.githubusercontent.com/IzaakWN/CodeSnippets/master/LaTeX/cleanBibTeX.py > cleanBibTeX.py
 python cleanBibTeX.py refs.bib -o refs_clean.bib --backup --check
 ```
+The checks are similar to this script from CMS TDR: https://gitlab.cern.ch/tdr/utils/-/blob/master/general/cleanRefs.

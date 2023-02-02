@@ -6,12 +6,12 @@ The main file is [`thesis.tex`](thesis.tex), which loads the chapters from [`sec
 
 ## Title page
 The faculty of natural sciences (MNF) has strict guidelines for the tile page and provides a template in MS Word.
-Please see https://www.mnf.uzh.ch/en/studium/phd/checkliste-fuer-doktorierende.html
+Please see https://www.mnf.uzh.ch/en/studium/phd/checkliste-fuer-doktorierende.html.
 A LaTeX version of this template can be found in [`titlepage/`](titlepage).
 
 ## Settings
 The preamble with settings like page layout are set in [`settings/preamble.tex`](settings/preamble.tex).
-Note that the document class is `scrreprt` from KOMA-script bundle.
+Note that the document class is `scrreprt` from the KOMA-script bundle.
 
 Some of the common macros and particle pennames in CMS TDR are mimicked in [`settings/macros_CMS_TDR.tex`](settings/macros_CMS_TDR.tex).
 Note that for particle names, "unslanted" Greek letters are used (this is just my personal preference to separate them from variables, which are in italics).
