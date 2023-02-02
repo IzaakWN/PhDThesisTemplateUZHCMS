@@ -42,7 +42,7 @@ You can find a standalone python module to get the official CMS style in ROOT pl
 ## CMS detector
 - TikZ figures: https://tikz.net/tag/cms/
 - CMS 3D: https://cms-docdb.cern.ch/cgi-bin/PublicDocDB/ShowDocument?docid=11514, https://twiki.cern.ch/twiki/bin/view/CMSPublic/SketchUpCMS
-- CMS slice with different types of particles interacting with the subdetectors: https://cds.cern.ch/record/2628641/ or https://cms-docdb.cern.ch/cgi-bin/PublicDocDB/ListBy?authorid=226
+- CMS slice with different types of particles interacting with the subdetectors: https://cds.cern.ch/record/2628641/, https://cms-docdb.cern.ch/cgi-bin/PublicDocDB/ListBy?authorid=226, [`detector/CMS_detector_PID_edit.pdf`](detector/CMS_detector_PID_edit.pdf)
 
 ## CMS subdetectors
 - CMS pixel paper: https://arxiv.org/abs/2012.14304, https://gitlab.cern.ch/tdr/reports/pixuptdr

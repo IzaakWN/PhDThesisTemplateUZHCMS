@@ -7,14 +7,7 @@
 \newchap{Object \& Event Reconstruction} \label{sec:objects}
 % https://twiki.cern.ch/twiki/bin/viewauth/CMS/Internal/PubDetector detector lines
 
-%particularly
-The lifetimes of particles like the Higgs, {\PW}, and {\PZ} bosons are extremely short ($\tau<10^{-20}\unit{s}$) and they decay shortly after their creation in pp collisions. Even if they have a large momentum, which increases their lifetime in the lab frame due to time dilation, they will travel a negligible distance, never reaching the pixel detector.
-
-As the heaviest lepton, with a mass of $m_\PGt = 1.776\GeV$, a $\PGt$ lepton can decay not just to electrons and muons, but also to lighter hadrons. In each $\PGt$ decay, there will be at least one neutrino carrying away some momentum. %from the 
-
-Except for the weakly interacting neutrinos, each of the final state particles mentioned above interacts with the detector in some special way.
-This chapter is therefore devoted to describing how pp collision events and physics objects are reconstructed from data collected by the CMS detector and identified with dedicated algorithms.
-A separate chapter will be dedicated to $\PGt$ leptons that decay to hadrons ($\tauh$), as their complex reconstruction builds on the techniques described in this chapter, and because I was involved with their reconstruction and identification in CMS.
+This chapter explains object and event reconstruction in the CMS experiment.
 
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -29,15 +22,8 @@ A separate chapter will be dedicated to $\PGt$ leptons that decay to hadrons ($\
 \input{tex/objects-fig-PID.tex}
 
 Figure~\ref{fig:lifetime} compares the lifetime, dividing them in different regions of stability in the context of the CMS experiment.
+
 Each of these particles has a unique set of properties that leave a characteristic signal in one or more of the subdetector, as illustrated in \Fig{fig:PID}.
-
-
-The top quark decays almost exclusively to a bottom quark and a $\PW$ boson instead of fragmenting into jets like the other quarks~\cite{BR_tt}.
-The top's lifetime of $\tau\approx5\times10^{-25}\unit{s}$ is shorter than the time scale for fragmentation, which is around $10^{-24}\unit{s}$ (or equivalently, a distance scale of about $1\unit{fm}$)~\cite{hadronization_timescale1,hadronization_timescale2}.
-
-Bottom quarks produced in high-energy collisions form $\PB$ hadrons that have typical lifetimes of $\tau\sim1.5\unit{ps}$. This is long enough for them to travel a measurable distance of the order of a few millimeters before decaying and creating a jet known as a \emph{b jet}. This can therefore create a \emph{secondary vertex} that is displaced from its production vertex, which CMS's tracking algorithm can reconstruct.
-
-As \Fig{fig:lifetime} shows, $\PGt$ leptons and charmed hadrons are also capable of creating secondary vertices, although each of their decays tend to have a different topology, providing us with some efficiency for distinguishing them with identification algorithms.
 
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -97,7 +83,6 @@ The relative isolation of a muon is defined with the so-called \emph{$\Delta\bet
 \end{equation}
 
 
-
 %%%%%%%%%%%%
 %   JETS   %
 %%%%%%%%%%%%
@@ -119,8 +104,8 @@ If a cluster $i$ of combined objects satisfies
 \begin{equation} \label{eq:antikT_cut}
   d_{ij} > d_{i\text{B}} = p_\text{T,i}^{-2},
 \end{equation}
-the algorithm defines it to be a jet and removes its PF candidates from consideration in clustering subsequent jets~\cite{PF2017,antikT}.
-The AK algorithm is implemented in the \FASTJET library~\cite{fastjet1,fastjet2}, and CHS is used to remove charged PF candidates not associated with the PV of the hard interaction.
+More info is given in Ref.~\cite{PF2017,antikT}.
+The AK algorithm is implemented in the \FASTJET library~\cite{fastjet1,fastjet2}, and \emph{charged-hadron subtraction} (CHS) is used.
 
 % JEC
 The CMS Collaboration determines \emph{jet energy corrections} (JECs) in several steps, which are explained in detail in Ref.~\cite{CMS-JME-10-011}.
@@ -128,7 +113,7 @@ Additionally, the jet energy and \emph{jet energy resolution} (JER) of jets in s
 
 % JET ID
 Genuine jets are distinguished from pileup jets with the identification algorithm~\cite{jetPUID}.
-Spurious jet-like features that originate from isolated noise patterns in certain HCAL regions with identification~\cite{jetID_2016}.
+Identification~\cite{jetID_2016} removes spurious jet-like features that originate from isolated noise patterns in certain HCAL regions.
 
 
 %%%%%%%%%%%%%
