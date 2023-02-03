@@ -35,6 +35,15 @@ Rules for capitalization in titles
 - Lowercase usage of "to" in all situations – whether as a preposition or as part of an infinitive.
 - Capitalize the second part of a hyphenated compound: "Research-Based Teaching and Learning".
 
+For example:
+```
+A Search for Dark Matter in Association with Top Quarks with the CMS Experiment%
+
+A Search for New Exotic Particles with Jets in Proton-Proton Collisions at the CMS Experiment%
+
+Collider Physics Measurements in High Jet Multiplicity Final States%
+```
+
 If you have a Swiss citizenship, name your place of citizenship, e.g.,
 - `von Genf GE`
 - `von Uster ZH`
@@ -48,7 +57,7 @@ If you are not a Swiss citizen, name the country of your official nationality, e
 - `aus \"Agypten`
 - `aus Belgien`
 - `aus Brasilien`
-- `aus eutschland`
+- `aus Deutschland`
 - `aus Frankreich`
 - `aus Italien`
 - `aus Iran`
