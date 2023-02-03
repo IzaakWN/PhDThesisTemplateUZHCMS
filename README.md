@@ -7,7 +7,7 @@ For a Master thesis in the Physics Institute, an official UZH template can also 
 The main file is [`thesis.tex`](thesis.tex), which loads the chapters from [`sections/`](sections/).
 If you use TeXShop, you can include `%!TEX root = ../thesis.tex` at the top of each file to compile this file.
 
-Some examples of chapters based on my own thesis are already given in [`sections/chap*.tex)`](sections),
+Some examples of chapters based on my own thesis are already given in [`sections/chap*.tex`](sections),
 and can be completely removed for your thesis, or used as a rough starting point for writing.
 
 ## Title page
