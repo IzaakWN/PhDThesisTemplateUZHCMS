@@ -54,9 +54,10 @@
 %                                    BACKWARDS-COMPATIBLE change!
 %                   ver 1.8a 12/99 - MACROs for arXiv and cogprints
 %                                    BaseURL's defined.
-%    Modified by Izaak Neutelings, 6/17
+%    Modified by Izaak Neutelings, 6/17 using https://gitlab.cern.ch/tdr/utils/-/blob/master/general/cms_unsrt.bst
 %           History: ver 2.0  6/17 - added multiple collaborations
 %                    ver 2.1 12/22 - add url to misc, add report number to PhDthesis
+%                    ver 2.2 02/23 - change "Collaboration" to "Group" if "Group" in collaboration field
 %
 % HyperTeX Wizardry:
 %
@@ -550,12 +551,13 @@ FUNCTION {format.date.paren}
 % Izaak Neutelings, July 2017
 % http://tug.ctan.org/info/bibtex/tamethebeast/ttb_en.pdf
 % https://tex.stackexchange.com/questions/119237/in-bst-file-check-if-variable-contains-string
-% format collaboration fields
+% Format collaboration fields:
 %   CMS               -> \textbf{CMS} Collaboration
 %   CMS Collaboration -> \textbf{CMS} Collaboration
 %   CMS and ATLAS                             -> \textbf{CMS} and \textbf{ATLAS} Collaboration
 %   CMS and ATLAS Collaboration               -> \textbf{CMS} and \textbf{ATLAS} Collaboration
 %   CMS Collaboration and ATLAS Collaboration -> \textbf{CMS} and \textbf{ATLAS} Collaboration
+%   CMS Tracker Group                         -> \textbf{CMS Tracker} Group
 %   "XENON T100 Collaboration"                -> \textbf{XENON~T100} Collaboration
 % Warning! This function abuses format.names's first name {ff} and last name {ll}!
 %          This might cause problems with more complicated collaboration names:
@@ -564,50 +566,55 @@ FUNCTION {format.date.paren}
 %   "XENON T100 Collaboration" -> \textbf{XENON~T100} Collaboration
 %   "{XENON~T100}"             -> \textbf{{XENON~T100}} Collaboration
 % Warning! Make sure these integers are already defined in your bst file: nameptr, namesleft, numnames
-STRINGS { res }
+STRINGS { res collstr }
 FUNCTION {format.collaboration}
 {
-  
   collaboration empty$                           %% if names > 0
-    { "" }                                       %%   return empty string
-    {                                            %%   else
-  "" 'res :=                                     %% result string
+    { "" }                                       %%   return empty string on stack
+    {                                            %% else
+  "" 'res :=                                     %% res = "" (initialize result string)
+  "Collaboration" 'collstr :=                    %% collstr = "Collaboration"
   #1 'nameptr :=                                 %% nameptr = 1 (name index)
   #0 'numnames :=                                %% numnames = 0 (counter of collaboration names)
   collaboration num.names$ 'namesleft :=         %% namesleft = number of names in collaboration
   { namesleft #0 > }                             %% while namesleft > 0
-  {                                              %%
-    collaboration nameptr "{ff}" format.name$ 'res :=       %% redefine res using first name {ff}
-    res empty$                                              %% if no match for first name {ff}
-      { collaboration nameptr "{ll}" format.name$ 'res := } %%   use last name {ll} instead
-      { skip$ }                                             %%   continue
-    if$                                                     %% end if
-    nameptr #1 =                                 %%   if nameptr == 1 (first name)
-      { "\textbf{" res * "}" * }                 %%     add first name to stack
-      {                                          %%
-        namesleft #1 =                           %%     if namesleft == 1
-          { " and \textbf{" * res * "}" * }      %%       concatenate "and" last string on stack
-          { ", \textbf{" * res * "}" * }         %%       concatenate ", " last string on stack
-        if$                                      %%     end if
-      }                                          %%
-    if$                                          %%   end if
-    nameptr #1 + 'nameptr :=                     %%   nameptr   += 1
-    numnames #1 + 'numnames :=                   %%   numnames  += 1
-    namesleft #1 - 'namesleft :=                 %%   namesleft -= 1
-  }                                              %%
+    {                                            %%
+      collaboration nameptr "{ff}" format.name$ 'res :=       %% redefine res using first name {ff}
+      res empty$                                              %% if no match for first name {ff}
+        { collaboration nameptr "{ll}" format.name$ 'res := } %%   use last name {ll} instead
+        { skip$ }                                             %%   do nothing
+      if$                                                     %% end if
+      nameptr #1 =                               %%   if nameptr == 1 (first name)
+        { "\textbf{" res * "}" * }               %%     add first name to stack
+        {                                        %%
+          namesleft #1 =                         %%     if namesleft == 1
+            { " and \textbf{" * res * "}" * }    %%       concatenate "and" last string on stack
+            { ", \textbf{" * res * "}" * }       %%       concatenate ", " last string on stack
+          if$                                    %%     end if
+        }                                        %%
+      if$                                        %%   end if
+      collaboration nameptr "{ll}" format.name$ "Group" = %% if lastname == "Group"
+        { "Group" 'collstr := }                           %%   collstr = "Group"
+        { skip$ }                                         %%   do nothing
+      if$                                                 %% end if
+      nameptr #1 + 'nameptr :=                   %%   nameptr   += 1
+      numnames #1 + 'numnames :=                 %%   numnames  += 1
+      namesleft #1 - 'namesleft :=               %%   namesleft -= 1
+    }                                            %%
   while$                                         %% end while
-  numnames #1 >                                  %%   if names > 1
-    { " Collaborations" * }                      %%     add "Collaborations" to last string on stack
-    { " Collaboration" * }                       %%     add "Collaboration"  to last string on stack
-  if$                                            %%   end if
+  " " * collstr *                                %% add " Collaboration" or " Group" to last string on stack
+  numnames #1 >                                  %% if names > 1
+    { "s" * }                                    %%   add plural "s" to last string on stack
+    { skip$ }                                    %%   add nothing
+  if$                                            %% end if
   }                                              %%   
   if$                                            %% end if
 }
 
 FUNCTION {format.SLACcitation}
 { SLACcitation empty$
-  {""}
-   { newline$ SLACcitation output "" newline$ }
+    {""}
+    { newline$ SLACcitation output "" newline$ }
   if$
 }
 
@@ -1316,7 +1323,7 @@ FUNCTION {techreport}
   link.shut
   blank.sep
   format.tr.number output.nonnull
-  institution "institution" output.check
+  institution output
   address output
   format.date "year" output.check
   new.block
@@ -1340,11 +1347,11 @@ FUNCTION {unpublished}
   format.title "title" output.check
   link.shut
   blank.sep
-  format.date.paren "year"  output.check
+  format.date "year" output.check
   new.sentence
   format.eprint output
   new.sentence
-  note "note" output.check
+  note output
   new.sentence
   format.SLACcitation output
   fin.entry
