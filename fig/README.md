@@ -3,12 +3,30 @@ Some basic figures related to the SM, LHC, and CMS.
 Some of the figures uploaded in this repo may be outdated by the time you need them.
 Please use the sources below to look for updated plots.
 
-## Official CMS style
+## CMS results
+
+### General guidelines
+CMS guidelines for figures can be found here:
+- https://twiki.cern.ch/twiki/bin/view/CMS/Internal/FigGuidelines
+- https://twiki.cern.ch/twiki/bin/view/CMS/Internal/Publications
+- https://twiki.cern.ch/twiki/bin/view/CMS/PhysicsApprovals
+
+A standalone `python` module to get the official CMS style in ROOT plots can be found here:
+[`CMSStyle.py`](https://github.com/cms-tau-pog/TauFW/blob/master/Plotter/python/plot/CMSStyle.py).
+
+### Unapproved results
 Please note the rules for plots with CMS data, simulation, results in PhD theses:
 https://twiki.cern.ch/twiki/bin/view/CMS/PhysicsApprovals#Thesis_endorsement
 
-You can find a standalone python module to get the official CMS style in ROOT plots here:
-[`CMSStyle.py`](https://github.com/cms-tau-pog/TauFW/blob/master/Plotter/python/plot/CMSStyle.py).
+### Published plots
+You can retrieve the original file of most CMS plots that have been published
+in a PAS or paper with CADI line `XXX-YY-NNN` either from CMS Public Pages, or directly from GitLab:
+- PAS notes: http://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/XXX-YY-NNN/index.html
+- Paper: http://cms-results.web.cern.ch/cms-results/public-results/publications/XXX-YY-NNN/ (also linked from "Comments" on the arXiv page)
+- PAS notes: https://gitlab.cern.ch/tdr/notes/XXX-YY-NNN
+- Papers: https://gitlab.cern.ch/tdr/papers/XXX-YY-NNN
+
+More recent reports on technical designs, upgrades, etc. can be found in https://gitlab.cern.ch/tdr/reports/
 
 ## Standard Model & beyond
 - TikZ figures: https://tikz.net/category/physics/particle-physics/
