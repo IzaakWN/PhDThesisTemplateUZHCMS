@@ -16,9 +16,8 @@ This chapter will discuss the experimental setup.
 %%%%%%%%%%%
 \section{The Large Hadron Collider}
 
-The Large Hadron Collider (LHC) is the world's largest and most powerful particle collider.
-It has a $27\unit{km}$ circumference and can reach a record collision energy of $13.6\TeV$.
-It surpasses the Tevatron accelerator at Fermilab in the United States~\cite{Tevatron}, which was about $6.3\unit{km}$ and reach a center-of-mass energy of $1.96\TeV$, and LEP, which reached a center-of-mass energy of $209\GeV$~\cite[Section 32]{PDG_2022}.
+The Large Hadron Collider (LHC) is the world's largest and most powerful particle collider with a $27\unit{km}$ circumference and a record collision energy of $13.6\TeV$.
+It surpasses the Tevatron accelerator at Fermilab in the United States~\cite{Tevatron} ($6.3\unit{km}$, $1.96\TeV$), and LEP ($209\GeV$)~\cite[Section 32]{PDG_2022}.
 
 During the data-taking period of 2015 to 2018, referred to as ``Run 2'', the energy of each proton beam was $6.5\TeV$, which means the center-of-mass energy was $\sqrt{s}=13\TeV$.
 The LHC machine is described in more technical detail in Ref.~\cite{LHC}.
@@ -31,9 +30,8 @@ The LHC machine is described in more technical detail in Ref.~\cite{LHC}.
 
 It depends on several beam parameters. The simplified expression is~\cite[p.~533]{PDG_2022}:
 \begin{equation}\label{eq:instant_lumi}
-  \lumi = \frac{N_1N_2f}{A},
+  \lumi = \frac{N_1N_2f}{A}.
 \end{equation}
-where $f$ is the frequency at which the beams cross, $A$ is the cross-sectional area of the beams' overlap, and $N_1$, $N_2$ are the number of particles in each beam.
 The LHC is designed to reach the nominal luminosity of $\lumi=10^{34}\unit{cm}^{-2}\unit{s}^{-1}$.
 See \Fig{fig:CMS_peak_lumi}.
 Each bunch contains about 110 billion protons~\cite{LHC,LHC_lumi_bunches_Run2}.
@@ -42,15 +40,12 @@ Each bunch contains about 110 billion protons~\cite{LHC,LHC_lumi_bunches_Run2}.
 Figure~\ref{fig:CMS_pileup} shows the distribution of the number of interactions per bunch crossing in all data-taking years of Run 2.
 
 % data
-This thesis is based on an analysis of pp collision data recorded between 2016 and 2018.
-Figure~\ref{fig:CMS_lumi} shows a comparison of the data volume accumulated per day of each data-taking year up to 2022. The amount of data is expressed in terms of \emph{integrated luminosity} $L$, which is simply the instantaneous luminosity $\lumi$ integrated over the time the LHC was running:
+Figure~\ref{fig:CMS_lumi} shows a the data of each data-taking year with \emph{integrated luminosity} $L$, which is
 \begin{equation}\label{eq:integrated_lumi}
   L \defeq \int\displaylimits_\text{data taking}\hspace{-4mm}\lumi(t)\text{d}t,
 \end{equation}
 given in units of inverse area, such as the inverse barn ($\unit{b}^{-1}$).
-Between 2016 and 2018, CMS collected about $138\fbinv$ of pp collision data that is suitable for physics analysis, see Chapter~\ref{sec:samples}.
-
-
+Between 2016 and 2018, CMS collected about $138\fbinv$ of pp collision data for physics analysis.
 
 
 %%%%%%%%%%%
@@ -62,9 +57,9 @@ Between 2016 and 2018, CMS collected about $138\fbinv$ of pp collision data that
 % FIGURE: CMS detector
 \input{tex/detector-fig-CMS.tex}
 
-The Compact Muon Solenoid (CMS) detector is located near the French town of Cessy, and lies about 100 meters deep at one of the interaction points at the LHC (see \Fig{fig:CERN_complex}).
-The detector is approximately cylindrically symmetric, with a length of 21.5 meters and diameter of 14.6 meters.
-An illustration is shown in Fig.~\ref{fig:CMS}. The following sections will give a broad overview. A detailed description can be found in Ref.~\cite{CMS}.
+The Compact Muon Solenoid (CMS) detector at one of the interaction points at the LHC.
+An illustration is shown in Fig.~\ref{fig:CMS}.
+A detailed description can be found in Ref.~\cite{CMS}.
 
 % COORDINATE SYSTEM
 \subsection{Coordinate system}
