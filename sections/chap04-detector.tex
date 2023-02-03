@@ -86,6 +86,7 @@ The inner tracker system has a \emph{silicon pixel tracker} and a \emph{silicon 
 The pixel tracker from 2008 up to 2016 was composed of $1440$ sensor modules with a total of $66$ million silicon pixels~\cite{CMS_vertex}.
 During the technical shutdown it was upgraded with 1856 modules with 124 million pixels in total~\cite{CMS_pixel_Phase1_2017,CMS_pixel_Phase1_2021}.
 Their layouts are compared in \Fig{fig:CMS_pixel}.
+See Refs.~\cite{CMS_vertex,CMS_vertex_plots_2017} for more information on the resolution.
 
 % Strip tracker
 \subsection{The silicon strip tracker}
@@ -105,6 +106,7 @@ The energy resolution can be parametrized as a function of energy~\cite{CMS}:
   \left(\frac{\sigma_E}{E}\right)^2 = \left(\frac{S}{\sqrt{E}}\right)^2 \oplus \left(\frac{N}{E}\right)^2 \oplus C^2,
 \end{equation}
 with the stochastic term $S$, the noise $N$, and a constant term $C$.
+The technical design report~\cite{CMS_ECAL} describes the ECAL in more technical detail.
 
 % HCAL
 \subsection{The hadronic calorimeter}
@@ -114,6 +116,7 @@ The last subdetector inside the solenoid is the \emph{hadron calorimeter} (HCAL)
 %\begin{equation}
 %  \left(\frac{\sigma}{E}\right)^2 = \left(\frac{S}{\sqrt{E}}\right)^2 \bigoplus B.
 %\end{equation}
+The jet energy resolution can be found in Ref.~\cite{CMS-JME-13-004}
 
 % Very forward HCAL
 The \emph{very forward HCAL} (HF) is positioned around the beamline outside the detector.
@@ -126,11 +129,13 @@ The final momentum resolution can be roughly parametrized as follows:
   \left(\frac{\sigma_{\pt}}{\pt}\right)^2 = \left(A\cdot\pt\right)^2 \oplus C^2,
 \end{equation}
 where $A$, and $C$ are constants determined by the hit resolution and multiple scattering, respectively~\cite{CMS_muon_resolution_thesis}. The resolution grows with momentum, because the track becomes more straight, which increases the uncertainty in its curvature.
+The technical design report can be found in Ref.~\cite{CMS_muon}.
 
 % TRIGGER
 \subsection{The trigger system}\label{sec:trigger}
 The collision rate of $40\unit{MHz}$ is higher than is possible to record offline.
 The \emph{L1 trigger} has a rate of about $100\unit{kHz}$.
 The next level, is the \emph{high-level trigger} (HLT).
+See Ref.~\cite{CMS_trigger}.
 
 
