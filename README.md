@@ -9,6 +9,7 @@ If you use TeXShop, you can include `%!TEX root = ../thesis.tex` at the top of e
 
 Some examples of chapters based on my own thesis are already given in [`sections/chap*.tex`](sections),
 and can be completely removed for your thesis, or used as a rough starting point for writing.
+Have a look at [`thesis.pdf`](thesis.pdf) to see how this template looks.
 
 ## Title page
 The faculty of natural sciences (MNF) has strict guidelines for the tile page and provides a template in MS Word.
