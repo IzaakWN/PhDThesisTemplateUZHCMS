@@ -10,9 +10,9 @@
 This chapter explains object and event reconstruction in the CMS experiment.
 
 
-%%%%%%%%%%%%%%%%%%%%%
-%   PID PRINCIPLES  %
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%
+%   PID PRINCIPLES   %
+%%%%%%%%%%%%%%%%%%%%%%
 \section{Principles of particle identification} \label{sec:PID}
 
 % FIGURE: Particle lifetimes
@@ -81,6 +81,25 @@ The relative isolation of a muon is defined with the so-called \emph{$\Delta\bet
     \frac{\sum_\text{charged} \pt + \max\left( 0, \sum_\text{neutral} \ET
                                   - \Delta\beta \sum_\text{charged, PU} \pt \right )}{\pt^{\PGm}}.
 \end{equation}
+
+
+%%%%%%%%%%%%
+%   TAUS   %
+%%%%%%%%%%%%
+\section{Hadronically Decayed \texorpdfstring{$\PGt$}{tau} Leptons} \label{sec:tauh}
+Hadronic decays of $\PGt$ leptons ($\tauh$) are reconstructed with the \emph{hadron-plus-strips} (HPS) \emph{algorithm} ~\cite{HPS1,HPS2,HPS3,DeepTau}.
+About $65\%$ of hadronic $\PGt$ decays involve neutral pions, which decay promptly ($\tau=8.4\times10^{-17}\unit{s}$) to two photons $98.8\%$ of the time~\cite[p.~33]{PDG_2022}.
+
+The $\tauh$ identification algorithm \DeepTau~\cite{DeepTau} was used to discriminate against jets that are initiated by quarks and gluons, as well as electrons and muons, see \Fig{fig:tau_jets}.
+
+% FIGURES: tau decay
+\input{tex/objects-fig-tauh_decay.tex}
+
+% FIGURES: tau decay
+\input{tex/objects-fig-tauh_signature.tex}
+
+% FIGURES: tau backgrounds
+\input{tex/objects-fig-tauh_jets.tex}
 
 
 %%%%%%%%%%%%
