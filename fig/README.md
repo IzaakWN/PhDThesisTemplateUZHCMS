@@ -40,6 +40,12 @@ More recent reports on technical designs, upgrades, etc. can be found in https:/
 ## Feynman diagrams
 - For instructions, see https://www.overleaf.com/learn/latex/Feynman_diagrams
 - For a gallery of examples, see https://wiki.physik.uzh.ch/cms/latex:feynman
+- Some examples are included in [`fig/feynman/`](feynman), including diagrams in equations.
+
+Note that it is possible to compile Feynman diagrams using the `feynmp` package together
+with your thesis, but it can get quite messy as it creates extra files.
+It's more convenient to create diagrams as standalone PDFs, and load them as a normal figure with `\includegraphics`.
+In that way, it is also easy to reuse the same diagrams.
 
 ## Flavor physics
 - Averages of B hadron decays (e.g. R(D) and R(D*)): https://hflav-eos.web.cern.ch/hflav-eos/semi/
