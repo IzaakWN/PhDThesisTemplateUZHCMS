@@ -39,13 +39,13 @@ More recent reports on technical designs, upgrades, etc. can be found in https:/
 
 ## Feynman diagrams
 - For instructions, see https://www.overleaf.com/learn/latex/Feynman_diagrams
-- For a gallery of examples, see https://wiki.physik.uzh.ch/cms/latex:feynman
-- Some examples are included in [`fig/feynman/`](feynman), including diagrams in equations.
+- For more information and a gallery of examples, see https://wiki.physik.uzh.ch/cms/latex:feynman
+- Some examples are included in [`feynman/`](feynman), including diagrams in equations ([`feynman/hierarchy_problem.tex`](feynman/hierarchy_problem.tex))
 
 Note that it is possible to compile Feynman diagrams using the `feynmp` package together
 with your thesis, but it can get quite messy as it creates extra files.
 It's more convenient to create diagrams as standalone PDFs, and load them as a normal figure with `\includegraphics`.
-In that way, it is also easy to reuse the same diagrams.
+In that way, it is also easy to reuse the same diagrams in other documents or presentations.
 
 ## Flavor physics
 - Averages of B hadron decays (e.g. R(D) and R(D*)): https://hflav-eos.web.cern.ch/hflav-eos/semi/
@@ -78,3 +78,6 @@ In that way, it is also easy to reuse the same diagrams.
 - CMS tau reconstruction with the HPS algorithm (TAU-16-003): https://arxiv.org/abs/1809.02816, http://cds.cern.ch/record/2196972, http://cms-results.web.cern.ch/cms-results/public-results/publications/TAU-16-003
 - CMS tau identification with the DeepTau algorithm (TAU-20-001): https://arxiv.org/abs/2201.08458, https://gitlab.cern.ch/tdr/papers/TAU-20-001, http://cms-results.web.cern.ch/cms-results/public-results/publications/TAU-20-001
 - Lifetime vs. mass plot: [`objects/SM_particles_masses.pdf`](objects/SM_particles_masses.pdf), https://arxiv.org/abs/1810.12602
+
+## Flow charts & sideband diagrams
+Some examples of diagrams explaining the definition of variables, event selections, sidebands, control regions (such as for the ABCD method), etc. are in [`selections/`](selection).
