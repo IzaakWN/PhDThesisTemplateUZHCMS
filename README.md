@@ -1,6 +1,7 @@
 # Thesis template for UZH CMS
 
-LaTeX template for a PhD thesis in the CMS group of the University of Zurich (UZH).
+This repository contains a LaTeX template for a PhD thesis in the CMS group of the University of Zurich (UZH),
+plus some useful materials to get started quickly.
 For a Master thesis in the Physics Institute, an official UZH template can also be found
 [here](https://www.physik.uzh.ch/en/study/Counselling-and-forms/formulare.htm).
 
