@@ -12,19 +12,19 @@
 \input{titlepage/titlepage}
 %\includepdf{titlepage/titlepage_UZH_PhD.pdf} % load PDF from MS Word template
 
+% ABSTRACT & ACKNOWLEDGEMENTS
+\linenumbers % for review (remove in final version!)
+\include{sections/abstract} % abstract
+\include{sections/acknow} % acknowledgements
+
 % TABLE OF CONTENT
 \pagenumbering{roman}
 %\addtocontents{lot}{ \protect\renewcommand*{\protect\addvspace}[1]{} }
 %\addtocontents{lof}{ \protect\renewcommand*{\protect\addvspace}[1]{} }
 \tableofcontents
 
-% ABSTRACT & ACKNOWLEDGEMENTS
-\include{sections/abstract} % abstract
-\include{sections/acknow} % acknowledgements
-
 % MAIN CONTENT
 \pagenumbering{arabic}
-\linenumbers % for review (remove in final version!)
 \include{sections/chap01-introduction}
 \include{sections/chap02-theory-SM}
 \include{sections/chap03-theory-BSM}
