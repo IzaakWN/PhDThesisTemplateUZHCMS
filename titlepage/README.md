@@ -22,7 +22,7 @@ LaTeX template:
 - [`titlepage_test_overlay.pdf`](titlepage_test_overlay.pdf): comparison with `titlepage_UZH_PhD_red.pdf` using overlay
 
 Please do not change any of the spacing in the LaTeX template like `\break`, `\vspace`, `\\`, white spaces, etc.
-Leave `%` at the end of a text line without a space to avoid a spurious space that offsets the centered text.
+Leave `%` at the end of a text line without a space after the last word to avoid a spurious space that offsets the centered text.
 
 
 ## MNF Guidelines

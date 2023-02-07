@@ -40,7 +40,6 @@ A bibliography style file for `BibTeX` that is adopted from the official CMS TDR
 as well as a bunch of BibTeX files with useful references.
 
 ## Copy to Overleaf
-
 Overleaf offers a good editor, and allows you to make a private & secure back up of your thesis.
 Using your affiliation with UZH or CERN, you can create a professional Overleaf account
 to access all the features like `git`.
