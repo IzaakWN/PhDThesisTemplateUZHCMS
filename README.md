@@ -4,6 +4,8 @@ This repository contains a LaTeX template for a PhD thesis in the CMS group of t
 plus some useful materials to get started quickly.
 For a Master thesis in the Physics Institute, an official UZH template can also be found
 [here](https://www.physik.uzh.ch/en/study/Counselling-and-forms/formulare.htm).
+More information for PhD students of the faculty of natural sciences (MNF) can be found
+[here](https://www.mnf.uzh.ch/en/studium/phd/checkliste-fuer-doktorierende.html).
 
 The main file is [`thesis.tex`](thesis.tex), which loads the chapters from [`sections/`](sections/).
 If you use TeXShop, you can include `%!TEX root = ../thesis.tex` at the top of each file to compile this file.
@@ -13,8 +15,8 @@ and can be completely removed for your thesis, or used as a rough starting point
 Have a look at [`thesis.pdf`](thesis.pdf) to see how this template looks.
 
 ## Title page
-The faculty of natural sciences (MNF) has strict guidelines for the tile page and provides a template in MS Word.
-Please see https://www.mnf.uzh.ch/en/studium/phd/checkliste-fuer-doktorierende.html.
+The MNF has strict guidelines for the tile page and provides a template in MS Word.
+Please find the template here: https://www.mnf.uzh.ch/en/studium/phd/checkliste-fuer-doktorierende.html.
 A LaTeX version of this template can be found in [`titlepage/`](titlepage).
 
 ## Settings
