@@ -588,8 +588,8 @@ FUNCTION {format.collaboration}
         { "\textbf{" res * "}" * }               %%     add first name to stack
         {                                        %%
           namesleft #1 =                         %%     if namesleft == 1
-            { " and \textbf{" * res * "}" * }    %%       concatenate "and" last string on stack
-            { ", \textbf{" * res * "}" * }       %%       concatenate ", " last string on stack
+            { " and \textbf{" * res * "}" * }    %%       concatenate "and" to last string on stack
+            { ", \textbf{" * res * "}" * }       %%       concatenate ", " to last string on stack
           if$                                    %%     end if
         }                                        %%
       if$                                        %%   end if
