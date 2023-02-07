@@ -55,7 +55,7 @@
 %                   ver 1.8a 12/99 - MACROs for arXiv and cogprints
 %                                    BaseURL's defined.
 %    Modified by Izaak Neutelings, 6/17 using https://gitlab.cern.ch/tdr/utils/-/blob/master/general/cms_unsrt.bst
-%           History: ver 2.0  6/17 - added multiple collaborations
+%           History: ver 2.0  6/17 - added support for multiple collaborations
 %                    ver 2.1 12/22 - add url to misc, add report number to PhDthesis
 %                    ver 2.2 02/23 - change "Collaboration" to "Group" if "Group" in collaboration field
 %
@@ -554,9 +554,9 @@ FUNCTION {format.date.paren}
 % Format collaboration fields:
 %   CMS               -> \textbf{CMS} Collaboration
 %   CMS Collaboration -> \textbf{CMS} Collaboration
-%   CMS and ATLAS                             -> \textbf{CMS} and \textbf{ATLAS} Collaboration
-%   CMS and ATLAS Collaboration               -> \textbf{CMS} and \textbf{ATLAS} Collaboration
-%   CMS Collaboration and ATLAS Collaboration -> \textbf{CMS} and \textbf{ATLAS} Collaboration
+%   CMS and ATLAS                             -> \textbf{CMS} and \textbf{ATLAS} Collaborations
+%   CMS and ATLAS Collaboration               -> \textbf{CMS} and \textbf{ATLAS} Collaborations
+%   CMS Collaboration and ATLAS Collaboration -> \textbf{CMS} and \textbf{ATLAS} Collaborations
 %   CMS Tracker Group                         -> \textbf{CMS Tracker} Group
 %   "XENON T100 Collaboration"                -> \textbf{XENON~T100} Collaboration
 % Warning! This function abuses format.names's first name {ff} and last name {ll}!
