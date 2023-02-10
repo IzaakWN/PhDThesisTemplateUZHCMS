@@ -14,6 +14,26 @@
 \renewcommand{\familydefault}{\sfdefault} % set sans serif font globally
 \sansmath % set sans serif font globally
 
+% UNSLANT GREEK LETTERS for particle symbols
+% https://tex.stackexchange.com/questions/145926/upright-greek-font-fitting-to-computer-modern
+% https://tex.stackexchange.com/questions/236915/adjust-custom-made-upright-greek-letters-when-used-in-subscripts
+\usepackage{scalerel}
+\newsavebox{\foobox}
+\newcommand{\slantbox}[2][0]{\mbox{%
+  \sbox{\foobox}{#2}%
+  \hskip\wd\foobox
+  \pdfsave
+  \pdfsetmatrix{1 0 #1 1}%
+  \llap{\usebox{\foobox}}%
+  \pdfrestore
+}}
+\newcommand\unslant[2][-.25]{%
+  %\mkern1.2mu%
+  \ThisStyle{\slantbox[#1]{$\SavedStyle#2$}}%
+  \mkern-2.2mu%
+}
+\newcommand\PGn[1]{\unslant\nu_{#1}\mkern-1.5mu} % neutrino
+
 % UNITS
 %\newcommand\MeV{\,\text{GeV}\mkern-1mu/\mkern-1muc^2} % HEP units
 %\newcommand\MeV{\,\text{MeV}\mkern-1mu/\mkern-1muc^2} % HEP units
@@ -44,7 +64,6 @@
 \pgfsetlayers{back,main} % set order
 
 % PARTICLE macro
-
 \def\pw{0.94} % width/height of particle box
 \tikzset{x={(1.5,0)},y={(0,1.6)}} % scale x, y axes differently
 \tikzset{
@@ -174,23 +193,23 @@
       \simeq0.511\MeV}{-1}{\sfrac{1}{2}}
   };
   \pic[pic opacity=\opGen{\opLep}{2}] (MU) at (2,2) {
-    particle={leptoncol}{$\mu$}{muon}{%
+    particle={leptoncol}{$\unslant\mu$}{muon}{%
       \simeq106\MeV}{-1}{\sfrac{1}{2}}
   };
   \pic[pic opacity=\opGen{\opLep}{3}] (TAU) at (3,2) {
-    particle={leptoncol}{$\tau$}{tau}{%
+    particle={leptoncol}{$\unslant\tau$}{tau}{%
       \simeq1.777\GeV}{-1}{\sfrac{1}{2}}
   };
   \pic[pic opacity=\opGen{\opNu}{1},textscale=0.66] (NE) at (1,1) {
-    particle={leptoncol}{$\nu_\text{e}$}{electron\\[-3pt]neutrino}{%
+    particle={leptoncol}{$\PGn{\text{e}}$}{electron\\[-3pt]neutrino}{%
       <1.0\eV}{0}{\sfrac{1}{2}}
   };
   \pic[pic opacity=\opGen{\opNu}{2},textscale=0.66] (NM) at (2,1) {
-    particle={leptoncol}{$\nu_\mu$}{muon\\[-3pt]neutrino}{%
+    particle={leptoncol}{$\PGn{\unslant\mu}$}{muon\\[-3pt]neutrino}{%
       <0.17\eV}{0}{\sfrac{1}{2}}
   };
   \pic[pic opacity=\opGen{\opNu}{3},textscale=0.66] (NT) at (3,1) {
-    particle={leptoncol}{$\nu_\tau$}{tau\\[-3pt]neutrino}{%
+    particle={leptoncol}{$\PGn{\unslant\tau}$}{tau\\[-3pt]neutrino}{%
       <18.2\MeV}{0}{\sfrac{1}{2}}
   };
   \node[leptoncol,bflabel,above right=0pt and -2pt,opacity=\opAllLep]
