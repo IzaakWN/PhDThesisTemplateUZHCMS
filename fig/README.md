@@ -31,7 +31,7 @@ More recent reports on technical designs, upgrades, etc. can be found in https:/
 ## Standard Model & beyond
 - TikZ figures: https://tikz.net/category/physics/particle-physics/
 - Particle physics timeline & energy scales: https://tikz.net/timeline/, https://particleadventure.org/other/history/index.html, [`intro/SM_timeline.pdf`](intro/SM_timeline.pdf)
-- SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg, PDF version: [`intro/SM_content_edited.pdf`](intro/SM_content_edited.pdf)
+- SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg, PDF version: [`intro/SM_particles_Wiki_edited.pdf`](intro/SM_particles_Wiki_edited.pdf), PDF of TikZ version: [`intro/SM_particles.pdf`](intro/SM_particles.pdf)
 - SM particle timeline: https://tikz.net/timeline/, inspired by https://particleadventure.org/other/history/index.html
 - Graphical representation of representations and quantum numbers under the SM gauge symmetry group: [`intro/SM_isospin_weak.pdf`](intro/SM_isospin_weak.pdf)
 - NNPDF31 PDF plots: https://arxiv.org/abs/1706.00428, [`intro/pdf_NNPDF3.1_NNLO.pdf`](intro/pdf_NNPDF3.1_NNLO.pdf)
