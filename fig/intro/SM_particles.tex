@@ -1,4 +1,7 @@
 % Author: Izaak Neutelings (February 2023)
+% Description:
+%   Standard Model (SM) of Particles Physics table,
+%   with different groups highlighted (using opacity) for presentations
 % Inspired by:
 %   https://en.wikipedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg
 \documentclass[border=3pt,tikz]{standalone}
@@ -49,7 +52,7 @@
 \colorlet{leptoncol}{green!80!black!70} % Wiki green
 %\colorlet{quarkcol}{blue!70!red!50} % Wiki purple
 \colorlet{quarkcol}{blue!85!cyan!95!black!55} % Wiki purple
-\colorlet{scalarcol}{yellow!75!orange!93!black}
+\colorlet{scalarcol}{yellow!70!orange!98!black}
 %\colorlet{tensorcol}{blue!60!cyan!80!black!15} % Wiki light blue
 \colorlet{tensorcol}{blue!50!red!70} % Wiki light blue
 \colorlet{groupcol}{orange!15}
@@ -65,8 +68,9 @@
 
 % PARTICLE macro
 \def\pw{0.94} % width/height of particle box
-\tikzset{x={(1.5,0)},y={(0,1.6)}} % scale x, y axes differently
 \tikzset{
+  x={(1.5,0)},y={(0,1.6)}, % scale x, y axes differently
+  global scale/.style={scale=#1,every node/.style={scale=#1}},
   intgroup/.style={draw=#1!90!black!80,line width=0.5, % interaction groups
                    fill=#1,fill opacity=0.5},
   intgroup/.default=groupcol,
