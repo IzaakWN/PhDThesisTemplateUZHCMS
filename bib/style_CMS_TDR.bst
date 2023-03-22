@@ -724,7 +724,7 @@ FUNCTION {format.pages.nopp}
 FUNCTION {format.volume}
 { volume empty$
     { "" }
-    { "\textbf{ " volume * "}" * }
+    { "\textbf{" volume * "}" * }
   if$
 }
 
