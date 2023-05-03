@@ -19,6 +19,10 @@ The MNF has strict guidelines for the tile page and provides a template in MS Wo
 Please find the template here: https://www.mnf.uzh.ch/en/studium/phd/checkliste-fuer-doktorierende.html.
 A LaTeX version of this template can be found in [`titlepage/`](titlepage).
 
+<p align="center" vertical-align: middle>
+  <img src="titlepage/titlepage_test.png" alt="Title page following UZH MNF guidelines" width="500"/>
+</p>
+
 ## Settings
 The preamble with settings like page layout are set in [`settings/preamble.tex`](settings/preamble.tex).
 Note that the document class is `scrreprt` from the KOMA-script bundle.

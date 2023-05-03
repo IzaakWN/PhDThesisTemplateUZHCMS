@@ -24,6 +24,9 @@ LaTeX template:
 Please do not change any of the spacing in the LaTeX template like `\break`, `\vspace`, `\\`, white spaces, etc.
 Leave `%` at the end of a text line without a space after the last word to avoid a spurious space that offsets the centered text.
 
+<p align="center" vertical-align: middle>
+  <img src="titlepage_test.png" alt="Title page following UZH MNF guidelines" width="500"/>
+</p>
 
 ## MNF Guidelines
 
