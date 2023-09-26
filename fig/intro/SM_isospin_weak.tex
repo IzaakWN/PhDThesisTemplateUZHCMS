@@ -12,7 +12,6 @@
 \usetikzlibrary{arrows.meta} % to control arrow size
 \tikzset{>={Latex[length=4,width=4]}} % for LaTeX arrow head
 \usetikzlibrary{calc}
-%\usetikzlibrary{decorations.markings,arrows.meta}
 \usepackage{xcolor} % for colored text
 \contourlength{1.1pt}
 
@@ -31,7 +30,7 @@
 \def\tick#1#2{\draw[thick] (#1) ++ (#2:1pt) --++ (#2-180:2pt)}
 \renewcommand\bar{\overline}
 \renewcommand\tilde{\widetilde}
-\newcommand{\YW}{Y} %_\mathrm{W}
+\newcommand{\YW}{Y_\mathrm{W}}
 \newcommand{\ff}[2]{#1_\text{#2}} % fermion field
 \newcommand{\aff}[2]{\overline{#1}_\text{#2}} % anti-fermion field
 \tikzstyle{guide}=[ultra thin,black!15,line cap=round]

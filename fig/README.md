@@ -31,9 +31,9 @@ More recent reports on technical designs, upgrades, etc. can be found in https:/
 ## Standard Model & beyond
 - TikZ figures: https://tikz.net/category/physics/particle-physics/
 - Particle physics timeline & energy scales: https://tikz.net/timeline/, https://particleadventure.org/other/history/index.html, [`intro/SM_timeline.pdf`](intro/SM_timeline.pdf)
-- SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg, PDF version: [`intro/SM_particles_Wiki_edited.pdf`](intro/SM_particles_Wiki_edited.pdf), PDF of TikZ version: [`intro/SM_particles.pdf`](intro/SM_particles.pdf)
+- SM table: https://commons.wikimedia.org/wiki/File:Standard_Model_of_Elementary_Particles.svg, PDF version: [`intro/SM_particles_Wiki_edited.pdf`](intro/SM_particles_Wiki_edited.pdf), PDF of TikZ version: [`intro/SM_particles.pdf`](intro/SM_particles.pdf) [[citation](https://tikz.net/sm_particles/)]
 - SM particle timeline: https://tikz.net/timeline/, inspired by https://particleadventure.org/other/history/index.html
-- Graphical representation of representations and quantum numbers under the SM gauge symmetry group: [`intro/SM_isospin_weak.pdf`](intro/SM_isospin_weak.pdf)
+- Graphical representation of representations and quantum numbers under the SM gauge symmetry group: [`intro/SM_isospin_weak.pdf`](intro/SM_isospin_weak.pdf) [[citation](https://tikz.net/sm_isospin_weak/)]
 - NNPDF31 PDF plots: https://arxiv.org/abs/1706.00428, [`intro/pdf_NNPDF3.1_NNLO.pdf`](intro/pdf_NNPDF3.1_NNLO.pdf)
 - CMS physics results & cross sections: https://twiki.cern.ch/twiki/bin/view/CMSPublic/PhysicsResultsCombined
 
@@ -69,6 +69,7 @@ In that way, it is also easy to reuse the same diagrams in other documents or pr
 - CMS slice with different types of particles interacting with the subdetectors: https://cds.cern.ch/record/2628641/, https://cms-docdb.cern.ch/cgi-bin/PublicDocDB/ListBy?authorid=226, [`detector/CMS_detector_PID_edit.pdf`](detector/CMS_detector_PID_edit.pdf)
 
 ## CMS subdetectors
+- CMS coordinate system: [`detector/CMS_coordinate_system.pdf`](detector/CMS_coordinate_system.pdf) [[citation](https://tikz.net/axis3d_cms/)]
 - CMS pixel paper: https://arxiv.org/abs/2012.14304, https://gitlab.cern.ch/tdr/reports/pixuptdr
 - CMS tracker sketch: https://twiki.cern.ch/twiki/bin/view/CMSPublic/DPGResultsTRK
 - CMS tracking performance: https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPerformance2017MC
