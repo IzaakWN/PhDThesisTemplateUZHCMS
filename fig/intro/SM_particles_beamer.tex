@@ -7,7 +7,7 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{tikz}
 \usepackage{amsmath} % for \text
-\usepackage{xfrac} % for \sfrac
+\usepackage{xfrac} % for \myfrac
 \usepackage{bm} % for \bm
 \usetikzlibrary{calc}
 \usetikzlibrary{positioning}
@@ -79,7 +79,7 @@
       \coordinate (-nw) at (-\pw/2, \pw/2);
       \coordinate (-se) at ( \pw/2,-\pw/2);
       \coordinate (-ne) at ( \pw/2, \pw/2);
-      \ifnum\pgfkeysvalueof{/tikz/fillbox}=1
+      \ifnum\pgfkeysvalueof{/tikz/fill box}=1
         \draw[#1,line width=1.1,rounded corners=3pt,shading angle=30,
               top color=#1!90!black!40,bottom color=#1!75!black!40]
           (-sw) rectangle (-ne);
@@ -91,27 +91,36 @@
           (-0.48*\pw,-0.48*\pw) rectangle (0.48*\pw,0.48*\pw)
           [rounded corners=3.7pt] (-sw) rectangle (-ne);
       \fi
-      \node[circle,ball color=#1,text=black,
-            minimum size=20,inner sep=0,scale=1,
+      %\node[circle,ball color=#1,text=black,
+      %      minimum size=20,inner sep=0,scale=1,
+      %      postaction={fill=#1!77,opacity=0.8*\OP,
+      %      draw=#1!80!black!90,ultra thin}]
+      %  (-p) at (0.01,0.06) {\textbf{\boldmath{#2}}};
+      \draw[draw=none,ball color=#1,scale=1, % particle ball
             postaction={fill=#1!77,opacity=0.8*\OP,
             draw=#1!80!black!90,ultra thin}]
-        (-p) at (0.02,0.06) {\textbf{\boldmath{#2}}};
+        (0,0.06) circle(10pt) coordinate(-p);
+      \node[text=black,scale=1,shift=\pgfkeysvalueof{/tikz/symb shift}] % particle symbol
+        at (-p) {\textbf{\boldmath{#2}}};
       \node[align=center,font=\bf,
-            scale=\pgfkeysvalueof{/tikz/textscale}]
+            scale=\pgfkeysvalueof{/tikz/name scale}]
         at (0,-0.3) {#3};
       \node[below right,proplabel]
-        at (-0.48*\pw,0.50*\pw) {\strut$#4$};
+        at (-0.5*\pw,0.50*\pw) {\strut$#4$};
       \node[below right,proplabel]
-        at (-0.48*\pw,0.35*\pw) {\strut$#5$};
+        at (-0.5*\pw,0.35*\pw) {\strut$#5$};
       \node[below right,proplabel]
-        at (-0.48*\pw,0.20*\pw) {\strut$#6$};
+        at (-0.5*\pw,0.20*\pw) {\strut$#6$};
       \end{scope}
     }
   },
-  textscale/.initial=0.8, % text scale
-  fillbox/.initial=0,     % fill particle boxes
-  pic opacity/.initial=1, % opacity of pictures
+  % DEFAULT SETTINGS of parameters:
+  name scale/.initial=0.8, % scale for particle name
+  symb shift/.initial={(0,0)}, % shift for particle symbol
+  fill box/.initial=0,     % fill particle boxes
+  pic opacity/.initial=1,  % opacity of pictures
 }
+\newcommand\myfrac[2]{\sfrac{#1\mkern-1.2mu}{#2}} % slanted frac
 
 % TITLE PAGE
 \title{Standard Model of Particle Physics}
@@ -130,33 +139,33 @@
     % SM TABLE
     \column{0.49\linewidth}
     \centering
-    \begin{tikzpicture}[fillbox=1,x={(1.5,0)},y={(0,1.6)},global scale=0.9]
+    \begin{tikzpicture}[fill box=1,x={(1.5,0)},y={(0,1.6)},global scale=0.9]
       
       % QUARKS
       \begin{scope}[alt={<4,10,14>{pic opacity=\d,opacity=\d}{}}] % to highlight others
         \pic[alt={{<7,8>{pic opacity=\d}{}}}] (QU) at (1,4) {
           particle={quarkcol}{u}{up}{%
-            \simeq2.2\MeV}{\!\sfrac{+\!2}{3}}{\sfrac{1}{2}}
+            \simeq2.2\MeV}{\!\myfrac{+\!2}{3}}{\myfrac{1}{2}}
         };
         \pic[alt={<6,8>{pic opacity=\d}{}}] (QC) at (2,4) {
           particle={quarkcol}{c}{charm}{%
-            \simeq1.3\GeV}{\!\sfrac{+\!2}{3}}{\sfrac{1}{2}}
+            \simeq1.3\GeV}{\!\myfrac{+\!2}{3}}{\myfrac{1}{2}}
         };
         \pic[alt={<6,7>{pic opacity=\d}{}}] (QT) at (3,4) {
           particle={quarkcol}{t}{top}{%
-            \simeq173\GeV}{\!\sfrac{+\!2}{3}}{\sfrac{1}{2}}
+            \simeq173\GeV}{\!\myfrac{+\!2}{3}}{\myfrac{1}{2}}
         };
-        \pic[alt={<7,8>{pic opacity=\d}{}}] (QD) at (1,3) {
+        \pic[alt={<7,8>{pic opacity=\d}{}},symb shift=(90:0.5pt)] (QD) at (1,3) {
           particle={quarkcol}{d}{down}{%
-            \simeq4.7\MeV}{\!\sfrac{-\!1}{3}}{\sfrac{1}{2}}
+            \simeq4.7\MeV}{\!\myfrac{-\!1}{3}}{\myfrac{1}{2}}
         };
         \pic[alt={<6,8>{pic opacity=\d}{}}] (QS) at (2,3) {
           particle={quarkcol}{s}{strange}{%
-            \simeq96\MeV}{\!\sfrac{-\!1}{3}}{\sfrac{1}{2}}
+            \simeq96\MeV}{\!\myfrac{-\!1}{3}}{\myfrac{1}{2}}
         };
-        \pic[alt={<6,7>{pic opacity=\d}{}}] (QB) at (3,3) {
+        \pic[alt={<6,7>{pic opacity=\d}{}},symb shift=(90:0.5pt)] (QB) at (3,3) {
           particle={quarkcol}{b}{bottom}{%
-            \simeq4.2\GeV}{\!\sfrac{-\!1}{3}}{\sfrac{1}{2}}
+            \simeq4.2\GeV}{\!\myfrac{-\!1}{3}}{\myfrac{1}{2}}
         };
         \node[below left,proplabel]
           at (0.5,4+0.5*\pw) {\strut mass};
@@ -172,29 +181,29 @@
       \begin{scope}[alt={<3,10,12,14>{pic opacity=\d,opacity=\d}{}}] % to highlight others
         \pic[alt={<7,8>{pic opacity=\d}{}}] (EL) at (1,2) {
           particle={leptoncol}{e}{electron}{%
-            \simeq0.511\MeV}{-1}{\sfrac{1}{2}}
+            \simeq0.511\MeV}{-1}{\myfrac{1}{2}}
         };
-        \pic[alt={<6,8>{pic opacity=\d}{}}] (MU) at (2,2) {
+        \pic[alt={<6,8>{pic opacity=\d}{}},symb shift=(-90:0.6pt)] (MU) at (2,2) {
           particle={leptoncol}{$\unslant\mu$}{muon}{%
-            \simeq106\MeV}{-1}{\sfrac{1}{2}}
+            \simeq106\MeV}{-1}{\myfrac{1}{2}}
         };
         \pic[alt={<6,7>{pic opacity=\d}{}}] (TAU) at (3,2) {
           particle={leptoncol}{$\unslant\tau$}{tau}{%
-            \simeq1.777\GeV}{-1}{\sfrac{1}{2}}
+            \simeq1.777\GeV}{-1}{\myfrac{1}{2}}
         };
         % NEUTRINOS
         \begin{scope}[alt={<11>{pic opacity=\d,opacity=\d}{}}] % to highlight others
-          \pic[alt={<7,8>{pic opacity=\d}{}},textscale=0.66] (NE) at (1,1) {
+          \pic[alt={<7,8>{pic opacity=\d}{}},name scale=0.66] (NE) at (1,1) {
             particle={leptoncol}{$\PGn{\text{e}}$}{electron\\[-3pt]neutrino}{%
-              <1.0\eV}{0}{\sfrac{1}{2}}
+              <1.0\eV}{0}{\myfrac{1}{2}}
           };
-          \pic[alt={<6,8>{pic opacity=\d}{}},textscale=0.66] (NM) at (2,1) {
+          \pic[alt={<6,8>{pic opacity=\d}{}},name scale=0.66,symb shift=(-90:0.6pt)] (NM) at (2,1) {
             particle={leptoncol}{$\PGn{\unslant\mu}$}{muon\\[-3pt]neutrino}{%
-              <0.17\eV}{0}{\sfrac{1}{2}}
+              <0.17\eV}{0}{\myfrac{1}{2}}
           };
-          \pic[alt={<6,7>{pic opacity=\d}{}},textscale=0.66] (NT) at (3,1) {
+          \pic[alt={<6,7>{pic opacity=\d}{}},name scale=0.66] (NT) at (3,1) {
             particle={leptoncol}{$\PGn{\unslant\tau}$}{tau\\[-3pt]neutrino}{%
-              <18.2\MeV}{0}{\sfrac{1}{2}}
+              <18.2\MeV}{0}{\myfrac{1}{2}}
           };
         \end{scope}
         \node[leptoncol,bflabel,above right=0pt and -2pt]
@@ -219,7 +228,7 @@
           particle={gaugecol}{$\mathrm{Z}$}{Z boson}{% %^0$
             \simeq91.2\GeV}{0}{1}
         };
-        %%%\pic[pic opacity=\opWeak,textscale=0.7] (L) at (5.6,1) {
+        %%%\pic[pic opacity=\opWeak,name scale=0.7] (L) at (5.6,1) {
         %%%  particle={gaugecol}{LQ}{leptoquark}{% %^0$
         %%%    ?}{?}{0 or 1} %>1\TeV
         %%%};
